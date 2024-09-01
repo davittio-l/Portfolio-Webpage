@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(78, 122, 127, 0.7);
+  background-color: rgba(199, 229, 255, 0.7);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -65,4 +65,56 @@ overlay {
 
 .project-tile:hover .overlay {
   opacity: 1;
+}
+
+#about-me {
+  padding: 50px 20px;
+  background-color: rgba(172, 206, 247, 0.7);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  max-width: 60%;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-photo {
+  max-width: 35%;
+  padding-left: 20px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#my-toolkit {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ccd1e2;
+}
+
+#my-toolkit h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
 }
