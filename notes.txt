@@ -1,0 +1,4 @@
+project 1: React, Firebase, SaSS
+project 2: HTML/JQuery/JS game - galiga?
+project 3: Node.js, React -- Multilayer web game? https://riven.ch/blog/build-lobby-based-online-multiplayer-browser-games-with-react-and-nodejs
+project 4: Vue.js/Js/ HTML 
