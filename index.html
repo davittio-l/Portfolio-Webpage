@@ -111,24 +111,36 @@
         </section>
         <section id="contact-me">
             <div class="contact-container">
-                <div class="contact-info"></div>
-                <h2>Connect With Me!</h2>
-                <p>If you ever want to have a quick chat, discuss projects, or any topics of interest - you can find me on social media or you can contact me here!</p>
-                <div class="social-media "></div>
-                <a href="https://www.linkedin.com/in/colten-bayles001/" target="_blank"><img src="static/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://github.com/davittio-l"><img src="static/github.png" alt="GitHub"></a>
-                <a href="https://www.facebook.com/colten.bayles/"><img src="static/facebook.png" alt="Facebook"></a>
-            </div>
-            <div class="contact-form">
-                <form id="contact-form" method="POST" action="http://localhost:3000/send-message">
-                    <input type="text" name="name" placeholder="name" required>
-                    <input type="email" name="email" placeholder="email" required>
-                    <textarea name="message" placeholder="message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-                              
+                <!-- Contact Info and Social Icons on the Left -->
+                <div class="contact-info">
+                    <h2>Connect With Me!</h2>
+                    <p>If you ever want to have a quick chat, discuss projects, or any <br>topics of interest - 
+                    you can find me on social media or you can contact me here!</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/colten-bayles001/" target="_blank">
+                            <img src="static/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/davittio-l" target="_blank">
+                            <img src="static/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.facebook.com/colten.bayles/" target="_blank">
+                            <img src="static/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+                <!-- Form on the Right -->
+                <div class="contact-form">
+                    <form id="contact-form" method="POST" action="http://localhost:3000/send-message">
+                        <input type="text" name="name" placeholder="name" required>
+                        <input type="email" name="email" placeholder="email" required>
+                        <textarea name="message" placeholder="message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
+        
+        
     </main>
 <script src="script.js"></script>
 </body>
