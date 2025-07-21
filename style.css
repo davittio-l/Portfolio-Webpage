@@ -36,11 +36,18 @@ header .intro {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #393347;
+  background-color: #fff;
 }
 
 .project-tile img {
   width: 100%;
-  display: black;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
