@@ -28,8 +28,9 @@ header .intro {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
+  justify-items: center;
 }
 
 .project-tile {
@@ -41,6 +42,12 @@ header .intro {
   border-radius: 50%;
   border: 3px solid #393347;
   background-color: #fff;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  flex-direction: column;
 }
 
 .project-tile img {
