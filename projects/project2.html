@@ -2,41 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Predictable PM Dashboard</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <header style="text-align:center; padding: 40px 20px;">
     <h1>Predictable PM Dashboard</h1>
-    <p>A sample project demonstrating Predictable planning and documentation.</p>
+    <p>A structured, milestone-driven approach to project delivery based on traditional project management principles.</p>
     <a href="../index.html" style="color:#393347; font-weight: bold;">← Back to Portfolio</a>
   </header>
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 20px;">
-    <section style="margin-bottom: 40px;">
-      <h2>Gantt Chart</h2>
-      <img src="../static/mock-schedule.png" alt="Sprint Schedule" style="width: 100%; max-width: 700px;" />
+
+    <!-- Gantt Chart -->
+    <section class="doc-section">
+      <h2>Project Timeline (Gantt Chart)</h2>
+      <div class="doc-grid">
+        <img src="../static/mock-gantt.png" alt="Gantt Chart" />
+        <div class="doc-details">
+          <p><p>This Gantt chart illustrates the structured delivery plan for an internal help desk software implementation, following a traditional waterfall approach. Tasks are grouped by phase and linked with clear dependencies to ensure logical sequencing and coordination across teams. The chart demonstrates a focus on scope control, phase gating, and timely delivery through disciplined schedule management.</p>
+        </p>
+        </div>
+      </div>
     </section>
 
-    <section style="margin-bottom: 40px;">
-      <h2>Cost Tracking</h2>
-      <img src="../static/mock-burndown.png" alt="Burndown Chart" style="width: 100%; max-width: 700px;" />
+    <!-- WBS -->
+    <section class="doc-section">
+      <h2>Work Breakdown Structure</h2>
+      <img src="../static/mock-wbs.png" alt="WBS" />
+      <p>The WBS broke the project into manageable work packages and informed both cost estimates and resource allocations.</p>
     </section>
 
-    <section style="margin-bottom: 40px;">
-      <h2>Milestone Plan</h2>
-      <img src="../static/mock-stakeholders.png" alt="Stakeholder Engagement Plan" style="width: 100%; max-width: 700px;" />
-    </section>
-
-    <section style="margin-bottom: 40px;">
+    <!-- Risk Register -->
+    <section class="doc-section">
       <h2>Risk Register</h2>
-      <img src="../static/mock-risk.png" alt="Risk Register" style="width: 100%; max-width: 700px;" />
+      <img src="../static/mock-risk.png" alt="Risk Register" />
+      <p>All identified risks were assessed for probability and impact and tracked via the project’s risk log. Contingency planning was a key part of our success.</p>
     </section>
 
-    <section style="margin-bottom: 40px;">
-      <h2>Budget Overview</h2>
-      <img src="../static/mock-budget.png" alt="Budget Overview" style="width: 100%; max-width: 700px;" />
+    <!-- Stakeholder Plan -->
+    <section class="doc-section">
+      <h2>Stakeholder Engagement</h2>
+      <img src="../static/mock-stakeholder.png" alt="Stakeholder Matrix" />
+      <p>Stakeholder mapping was used to build a communication plan tailored to each role’s influence and interest in the project.</p>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section>
+      <h2>Final Summary & Lessons Learned</h2>
+      <ul>
+        <li>Met every milestone on schedule through disciplined planning and strong vendor alignment</li>
+        <li>Used structured communication to reduce scope creep and RFIs</li>
+        <li>Would enhance early-phase procurement processes in future projects</li>
+      </ul>
     </section>
   </main>
 </body>
