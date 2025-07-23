@@ -1,0 +1,74 @@
+.pdf-card {
+  display: inline-block;
+  margin: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pdf-thumbnail {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+.pdf-thumbnail:hover {
+  transform: scale(1.03);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  height: 80%;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.pdf-card {
+  display: inline-block;
+  margin: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pdf-thumbnail {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.pdf-thumbnail:hover {
+  transform: scale(1.03);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #d9eb76;
+  cursor: pointer;
+  font-weight: bold;
+}
