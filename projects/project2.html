@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Predictable PM Dashboard</title>
   <link rel="stylesheet" href="../project2.css" />
 </head>
@@ -14,56 +15,60 @@
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 20px;">
 
-    <!-- Gantt Chart -->
-    <section class="doc-section">
-      <h2>Project Timeline (Gantt Chart)</h2>
-      <div class="doc-grid">
-        <img src="../static/mock-gantt.png" alt="Gantt Chart" />
-        <div class="doc-details">
-          <p><p>This Gantt chart illustrates the structured delivery plan for an internal help desk software implementation, following a traditional waterfall approach. Tasks are grouped by phase and linked with clear dependencies to ensure logical sequencing and coordination across teams. The chart demonstrates a focus on scope control, phase gating, and timely delivery through disciplined schedule management.</p>
-        </p>
-        </div>
+    <!-- PDF Grid -->
+    <section class="pdf-grid">
+      <!-- Project Charter PDF Card -->
+      <div class="pdf-card">
+          <img src="/static/Project-Charter2.png" alt="Project Charter Preview" class="pdf-thumbnail" onclick="openPdf('/static/Project-Charter2.pdf')" />
+          <p>Project Charter</p>
+      </div>
+
+      <!-- Gantt PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/mock-gantt.png" alt="Gantt Preview" class="pdf-thumbnail" onclick="openPdf('/static/gantt2.pdf')" />
+        <p>Project Schedule</p>
+      </div>
+
+      <!-- WBS PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/mock-wbs.png" alt="WBS Preview" class="pdf-thumbnail" onclick="openPdf('/static/wbs2.pdf')" />
+        <p>WBS</p>
+      </div>
+
+      <!-- Budget PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/preview-budget.png" alt="Budget Preview" class="pdf-thumbnail" onclick="openPdf('/static/budget2.pdf')" />
+        <p>Budget Document</p>
+      </div>
+
+      <!-- Risk Register PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/mock-risk.png" alt="Risk Register Preview" class="pdf-thumbnail" onclick="openPdf('/static/risk2.pdf')" />
+        <p>Risk Register</p>
+      </div>
+
+      <!-- Stakeholder Engagement Plan PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/mock-stakeholder2.png" alt="Stakeholder Plan Preview" class="pdf-thumbnail" onclick="openPdf('/static/Stakeholder-Engagement-Plan2.pdf')" />
+        <p>Stakeholder Engagement Plan</p>
+      </div>
+      <!-- Change Management Plan PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/Change-Management-Plan2.png" alt="Change Management Plan Preview" class="pdf-thumbnail"
+        onclick="openPdf('/static/Change-Management-Plan2.pdf')" />
+        <p>Change Management Plan</p>
+      </div>
+    
+      <!-- Change Log PDF Card -->
+      <div class="pdf-card">
+        <img src="/static/Change-Log2.png" alt="Change Log Preview" class="pdf-thumbnail"
+        onclick="openPdf('/static/Change-Log2.pdf')" />
+        <p>Change Log</p>
       </div>
     </section>
 
-    <!-- WBS -->
-    <section class="doc-section">
-      <h2>Work Breakdown Structure</h2>
-      <img src="../static/mock-wbs.png" alt="WBS" />
-      <p>The WBS broke the project into manageable work packages and informed both cost estimates and resource allocations.</p>
-    </section>
-
-    <!-- Budget PDF Card -->
-    <div class="pdf-card">
-        <img src="/static/preview-budget.png" alt="Budget Preview" class="pdf-thumbnail" onclick="openPdf('/static/budget2.pdf')" />
-        <p>Budget Document</p>
-    </div>
-    
-    <!-- Modal Viewer -->
-    <div id="pdf-modal" class="modal">
-        <div class="modal-content">
-        <span class="close-btn" onclick="closePdf()">×</span>
-        <iframe id="pdf-frame" src="" frameborder="0"></iframe>
-        </div>
-    </div>
-   
-
-    <!-- Risk Register -->
-    <section class="doc-section">
-      <h2>Risk Register</h2>
-      <img src="../static/mock-risk.png" alt="Risk Register" />
-      <p>All identified risks were assessed for probability and impact and tracked via the project’s risk log. Contingency planning was a key part of our success.</p>
-    </section>
-
-    <!-- Stakeholder Plan -->
-    <section class="doc-section">
-      <h2>Stakeholder Engagement</h2>
-      <img src="../static/mock-stakeholder.png" alt="Stakeholder Matrix" />
-      <p>Stakeholder mapping was used to build a communication plan tailored to each role’s influence and interest in the project.</p>
-    </section>
-
     <!-- Lessons Learned -->
-    <section>
+    <section style="margin-top: 60px;">
       <h2>Final Summary & Lessons Learned</h2>
       <ul>
         <li>Met every milestone on schedule through disciplined planning and strong vendor alignment</li>
@@ -72,16 +77,16 @@
       </ul>
     </section>
   </main>
-  
+
 <!-- PDF Modal -->
-<div id="pdf-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999;">
-    <div style="position:relative; width:90%; height:90%; margin:5% auto; background:#fff; border-radius:8px; overflow:hidden;">
-      <button onclick="closePdf()" style="position:absolute; top:10px; right:10px; z-index:10;">✖</button>
-      <iframe id="pdf-frame" style="width:100%; height:100%; border:none;"></iframe>
+<div id="pdf-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePdf()">×</span>
+      <iframe id="pdf-frame" src="" frameborder="0"></iframe>
     </div>
   </div>
-  
 
+  <!-- Link your JS -->
   <script src="../project2.js"></script>
 </body>
 </html>

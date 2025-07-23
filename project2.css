@@ -1,22 +1,45 @@
+body {
+  background-color: rgba(199, 229, 255, 0.7);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
 .pdf-card {
-  display: inline-block;
-  margin: 15px;
+  background: rgb(237, 234, 234);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+}
+
+.pdf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 
 .pdf-thumbnail {
-  width: 180px;
-  height: auto;
+  width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
-}
-.pdf-thumbnail:hover {
-  transform: scale(1.03);
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
-/* Modal */
+/* Modal overlay */
 .modal {
   display: none;
   position: fixed;
@@ -25,50 +48,45 @@
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
+/* Modal content container */
 .modal-content {
   position: relative;
-  margin: 5% auto;
-  width: 80%;
-  height: 80%;
-  background: white;
-  padding: 10px;
+  margin: 0 auto;
+  top: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: white;
   border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.pdf-card {
-  display: inline-block;
-  margin: 15px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.pdf-thumbnail {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
-}
-
-.pdf-thumbnail:hover {
-  transform: scale(1.03);
-}
-
+/* Close button */
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 5px;
   font-size: 24px;
-  color: #d9eb76;
-  cursor: pointer;
   font-weight: bold;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* PDF iframe */
+#pdf-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
