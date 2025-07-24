@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hybrid PM Dashboard</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Hybrid Project Dashboard</title>
+  <link rel="stylesheet" href="../project3.css" />
 </head>
+
 <body>
   <header style="text-align:center; padding: 40px 20px;">
-    <h1>Hybrid PM Dashboard</h1>
-    <p>A sample project demonstrating Hybrid planning and documentation.</p>
-    <a href="../index.html" style="color:#393347; font-weight: bold;">← Back to Portfolio</a>
+    <h1>Hybrid Project Dashboard</h1>
+    <p>A combination of traditional construction and agile software development practices for enterprise-level infrastructure delivery.</p>
+    <a href="../index.html" style="color:#393347; font-weight: bold;">&larr; Back to Portfolio</a>
   </header>
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 20px;">
-    <section style="margin-bottom: 40px;">
-      <h2>Gantt Chart</h2>
-      <img src="../static/mock-schedule.png" alt="Sprint Schedule" style="width: 100%; max-width: 700px;" />
+    <section class="pdf-grid">
+      <!-- Charter Card -->
+      <div class="pdf-card">
+        <img src="/static/mock-charter3.png" alt="Charter Preview" class="pdf-thumbnail" onclick="openPdf('/static/project-charter3.pdf')" />
+        <p>Project Charter</p>
+      </div>
+
+      <!-- Timeline Card (Gantt or Milestone) -->
+      <div class="pdf-card">
+        <img src="/static/mock-timeline3.png" alt="Timeline Preview" class="pdf-thumbnail" onclick="openPdf('/static/gantt3.pdf')" />
+        <p>Project Timeline</p>
+      </div>
+
+      <!-- Budget Card -->
+      <div class="pdf-card">
+        <img src="/static/mock-budget3.png" alt="Budget Preview" class="pdf-thumbnail" onclick="openPdf('/static/budget3.pdf')" />
+        <p>Budget Document</p>
+      </div>
+
+      <!-- Risk Register -->
+      <div class="pdf-card">
+        <img src="/static/mock-risk3.png" alt="Risk Preview" class="pdf-thumbnail" onclick="openPdf('/static/risk3.pdf')" />
+        <p>Risk Register</p>
+      </div>
+
+      <!-- Stakeholder Engagement Plan -->
+      <div class="pdf-card">
+        <img src="/static/mock-stakeholder3.png" alt="Stakeholder Preview" class="pdf-thumbnail" onclick="openPdf('/static/stakeholder-plan3.pdf')" />
+        <p>Stakeholder Engagement Plan</p>
+      </div>
+
+      <!-- Change Management Plan -->
+      <div class="pdf-card">
+        <img src="/static/mock-change-plan3.png" alt="Change Mgmt Plan Preview" class="pdf-thumbnail" onclick="openPdf('/static/change-management-plan3.pdf')" />
+        <p>Change Management Plan</p>
+      </div>
+
+      <!-- Change Log -->
+      <div class="pdf-card">
+        <img src="/static/mock-change-log3.png" alt="Change Log Preview" class="pdf-thumbnail" onclick="openPdf('/static/change-log3.pdf')" />
+        <p>Change Log</p>
+      </div>
     </section>
 
-    <section style="margin-bottom: 40px;">
-      <h2>Sprint Planning Snapshot</h2>
-      <img src="../static/mock-burndown.png" alt="Burndown Chart" style="width: 100%; max-width: 700px;" />
-    </section>
-
-    <section style="margin-bottom: 40px;">
-      <h2>Milestone & Deliverable Tracker</h2>
-      <img src="../static/mock-stakeholders.png" alt="Stakeholder Engagement Plan" style="width: 100%; max-width: 700px;" />
-    </section>
-
-    <section style="margin-bottom: 40px;">
-      <h2>Risk Matrix</h2>
-      <img src="../static/mock-risk.png" alt="Risk Register" style="width: 100%; max-width: 700px;" />
-    </section>
-
-    <section style="margin-bottom: 40px;">
-      <h2>Stakeholder Map or Engagement Plan</h2>
-      <img src="../static/mock-budget.png" alt="Budget Overview" style="width: 100%; max-width: 700px;" />
+    <!-- Lessons Learned -->
+    <section style="margin-top: 60px;">
+      <h2>Lessons Learned</h2>
+      <ul>
+        <li>Parallel scheduling can reduce total program delivery by 1–2 months if managed carefully</li>
+        <li>Construction and agile teams must align milestones to avoid dependency delays</li>
+        <li>Risk mitigation plans for both physical and digital security are crucial for infrastructure projects</li>
+      </ul>
     </section>
   </main>
+
+  <!-- PDF Modal -->
+  <div id="pdf-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePdf()">&times;</span>
+      <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="../project3.js"></script>
 </body>
+
 </html>
