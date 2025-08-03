@@ -14,57 +14,69 @@
   </header>
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+    <!-- Case Study Summary -->
+    <section style="margin-bottom: 40px;">
+      <h2>Project Overview</h2>
+      <p>This internal Help Desk IT project focused on replacing a fragmented ticketing system with a centralized platform. The challenge was coordinating multiple departments and vendors under tight timelines while maintaining strong stakeholder alignment.</p>
+      <h3>Role & Contributions</h3>
+      <ul>
+        <li>Developed charter, schedule, and budget from scratch</li>
+        <li>Led cross-functional teams across engineering and support divisions</li>
+        <li>Managed vendor contracts, risks, and stakeholder engagement</li>
+      </ul>
+    </section>
 
     <!-- PDF Grid -->
     <section class="pdf-grid">
-      <!-- Project Charter PDF Card -->
       <div class="pdf-card">
           <img src="/static/Project-Charter2.png" alt="Project Charter Preview" class="pdf-thumbnail" onclick="openPdf('/static/Project-Charter2.pdf')" />
           <p>Project Charter</p>
       </div>
 
-      <!-- Gantt PDF Card -->
       <div class="pdf-card">
         <img src="/static/mock-gantt.png" alt="Gantt Preview" class="pdf-thumbnail" onclick="openPdf('/static/gantt2.pdf')" />
         <p>Project Schedule</p>
       </div>
 
-      <!-- WBS PDF Card -->
       <div class="pdf-card">
         <img src="/static/mock-wbs.png" alt="WBS Preview" class="pdf-thumbnail" onclick="openPdf('/static/wbs2.pdf')" />
         <p>WBS</p>
       </div>
 
-      <!-- Budget PDF Card -->
       <div class="pdf-card">
         <img src="/static/preview-budget.png" alt="Budget Preview" class="pdf-thumbnail" onclick="openPdf('/static/budget2.pdf')" />
         <p>Budget Document</p>
       </div>
 
-      <!-- Risk Register PDF Card -->
       <div class="pdf-card">
         <img src="/static/mock-risk.png" alt="Risk Register Preview" class="pdf-thumbnail" onclick="openPdf('/static/risk2.pdf')" />
         <p>Risk Register</p>
       </div>
 
-      <!-- Stakeholder Engagement Plan PDF Card -->
       <div class="pdf-card">
         <img src="/static/mock-stakeholder2.png" alt="Stakeholder Plan Preview" class="pdf-thumbnail" onclick="openPdf('/static/Stakeholder-Engagement-Plan2.pdf')" />
         <p>Stakeholder Engagement Plan</p>
       </div>
-      <!-- Change Management Plan PDF Card -->
+
       <div class="pdf-card">
-        <img src="/static/Change-Management-Plan2.png" alt="Change Management Plan Preview" class="pdf-thumbnail"
-        onclick="openPdf('/static/Change-Management-Plan2.pdf')" />
+        <img src="/static/Change-Management-Plan2.png" alt="Change Management Plan Preview" class="pdf-thumbnail" onclick="openPdf('/static/Change-Management-Plan2.pdf')" />
         <p>Change Management Plan</p>
       </div>
-    
-      <!-- Change Log PDF Card -->
+
       <div class="pdf-card">
-        <img src="/static/Change-Log2.png" alt="Change Log Preview" class="pdf-thumbnail"
-        onclick="openPdf('/static/Change-Log2.pdf')" />
+        <img src="/static/Change-Log2.png" alt="Change Log Preview" class="pdf-thumbnail" onclick="openPdf('/static/Change-Log2.pdf')" />
         <p>Change Log</p>
       </div>
+    </section>
+
+    <!-- Project Results -->
+    <section style="margin-top: 60px;">
+      <h2>Project Results</h2>
+      <ul>
+        <li>100% on-time milestone delivery</li>
+        <li>Reduced internal support escalations by 20%</li>
+        <li>Post-launch adoption rate of 95%</li>
+      </ul>
     </section>
 
     <!-- Lessons Learned -->
@@ -78,8 +90,8 @@
     </section>
   </main>
 
-<!-- PDF Modal -->
-<div id="pdf-modal" class="modal">
+  <!-- PDF Modal -->
+  <div id="pdf-modal" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closePdf()">×</span>
       <iframe id="pdf-frame" src="" frameborder="0"></iframe>
