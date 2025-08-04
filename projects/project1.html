@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Internal Feedback App – Agile Case Study</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../project1.css" />
 </head>
 <body>
   <header style="text-align:center; padding: 40px 20px;">
@@ -21,39 +21,49 @@
       </p>
     </section>
 
-    <section>
-      <h2>Product Backlog</h2>
-      <img src="../static/mock-backlog.png" alt="Product Backlog" style="width:100%; max-width:700px;" />
-      <p>Backlog organized by priority and value. Managed in a Kanban board (e.g., Trello, Jira).</p>
+    <section id="product-backlog">
+      <h2>Interactive Product Backlog</h2>
+      <p>This is the live Product Backlog view powered by Monday.com. You can explore tasks, user stories, and priorities in real time.</p>
+    
+      <iframe 
+        width="100%" 
+        height="600" 
+        style="border: none;" 
+        src="https://view.monday.com/embed/9733482366-9979191ebc06d4a435730194e35f6790?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" 
+        allowfullscreen>
+      </iframe>
     </section>
 
-    <section>
-      <h2>Sprint Backlog – Sprint 1</h2>
-      <img src="../static/mock-sprint-backlog.png" alt="Sprint Backlog" style="width:100%; max-width:700px;" />
-      <p>Selected stories for Sprint 1 with tasks broken down and estimated in story points.</p>
+    <section id="sprint-backlog">
+      <h2>Sprint Backlog</h2>
+      <p>This section shows what the team committed to during Sprint 1, pulled from the Product Backlog.</p>
+    
+      <iframe 
+        width="100%" 
+        height="600" 
+        style="border: none;" 
+        src="https://view.monday.com/embed/9733482670-77f82b6370227557e89b3c53bb9ebe35?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" 
+        allowfullscreen>
+      </iframe>
     </section>
 
-    <section>
-      <h2>Sample User Stories</h2>
-      <ul>
-        <li><strong>As a</strong> team member, <strong>I want to</strong> send anonymous feedback <strong>so that</strong> I can give honest input.</li>
-        <li><strong>As a</strong> manager, <strong>I want to</strong> view feedback trends <strong>so that</strong> I can improve team morale.</li>
-      </ul>
-      <p>Each story includes acceptance criteria using the “Given–When–Then” format.</p>
+    <section id="agile-metrics">
+      <h2>Agile Metrics</h2>
+      <p>Click below to view Agile reports in fullscreen.</p>
+    
+      <div class="pdf-grid">
+        <div class="pdf-card" onclick="openPdf('../static/burndown1.pdf')">
+          <img src="../static/burndown1.png" alt="Burndown Chart" class="pdf-thumbnail">
+          <p>Burndown Chart (Sprint 1)</p>
+        </div>
+    
+        <div class="pdf-card" onclick="openPdf('../static/velocity1.pdf')">
+          <img src="../static/velocity1.png" alt="Velocity Chart" class="pdf-thumbnail">
+          <p>Velocity Chart</p>
+        </div>
+      </div>
     </section>
-
-    <section>
-      <h2>Sprint 1 Burndown Chart</h2>
-      <img src="../static/mock-burndown.png" alt="Burndown Chart" style="width: 100%; max-width: 700px;" />
-    </section>
-
-    <section>
-      <h2>Increment Demo</h2>
-      <img src="../static/mock-increment.png" alt="Increment Demo" style="width:100%; max-width:700px;" />
-      <p>Completed working features at the end of Sprint 1. <br>
-      <a href="#">[Optional: Link to live demo or video walkthrough]</a></p>
-    </section>
-
+        
     <section>
       <h2>Sprint Retrospective – Sprint 1</h2>
       <ul>
@@ -73,6 +83,17 @@
         <li>Demoed and accepted by Product Owner</li>
       </ul>
     </section>
+
+  <!-- PDF Modal -->
+  <div id="pdf-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePdf()">×</span>
+      <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Link your JS -->
+  <script src="../project1.js"></script>
   </main>
 </body>
 </html>
