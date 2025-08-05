@@ -21,22 +21,40 @@
       </p>
     </section>
 
+    <section>
+      <h2>Sprint Plan</h2>
+      <p>Click below to view the Sprint Planning PDF in fullscreen.</p>
+    
+      <div class="pdf-grid">
+        <div class="pdf-card" onclick="openPdf('../static/Project3 - Sprint Plan.pdf')">
+          <img src="../static/sprint-plan-p3.png" alt="Sprint Planning PDF" class="pdf-thumbnail">
+          <p>Sprint Planning (PDF)</p>
+        </div>
+      </div>
+    </section>
+
     <section id="agile-metrics">
       <h2>Agile Metrics</h2>
       <p>Click below to view Agile reports in fullscreen.</p>
     
       <div class="pdf-grid">
-        <div class="pdf-card" onclick="openPdf('../static/burndown1.pdf')">
-          <img src="../static/burndown3.png" alt="Burndown Chart" class="pdf-thumbnail">
+        <div class="pdf-card" onclick="openPdf('../static/BurndownS1_P3.pdf')">
+          <img src="../static/BurndownS1_P3.png" alt="Sprint 1 Burndown" class="pdf-thumbnail">
           <p>Burndown Chart (Sprint 1)</p>
         </div>
     
-        <div class="pdf-card" onclick="openPdf('../static/velocity1.pdf')">
-          <img src="../static/velocity3.png" alt="Velocity Chart" class="pdf-thumbnail">
+        <div class="pdf-card" onclick="openPdf('../static/BurndownS2_P3.pdf')">
+          <img src="../static/BurndownS2_P3.png" alt="Sprint 2 Burndown" class="pdf-thumbnail">
+          <p>Burndown Chart (Sprint 2)</p>
+        </div>
+    
+        <div class="pdf-card" onclick="openPdf('../static/Velocity_P3.pdf')">
+          <img src="../static/Velocity_P3.png" alt="Velocity Chart" class="pdf-thumbnail">
           <p>Velocity Chart</p>
         </div>
       </div>
     </section>
+    
 
     <section id="kanban">
       <h2>Interactive Kanban board</h2>
@@ -46,14 +64,8 @@
         width="100%" 
         height="600" 
         style="border: none;" 
-        src="https://view.monday.com/embed/9738435279-9e3e1aaed028c2ac021c1ddc8ab569f9?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" 
-        allowfullscreen>
-      </iframe>
+        src="https://view.monday.com/embed/9738435279-9e3e1aaed028c2ac021c1ddc8ab569f9?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);">
     </section>
-
-    <section id="sprint-backlog">
-      <h2>Kanban Board</h2>
-      <p>INSERT TEXT here</p>
     
       <iframe 
         width="100%" 
@@ -65,13 +77,18 @@
     </section>
         
     <section>
-      <h2>Sprint Retrospective – Sprint 1</h2>
-      <ul>
-        <li>What went well: Daily standups kept communication clear and blockers visible</li>
-        <li>What to improve: Improve story point estimation accuracy for future sprints</li>
-        <li>Action Items: Use Planning Poker and better refine backlog items before sprint start</li>
-      </ul>
+      <h2>Sprint Retrospective – Sprint 1 & 2</h2>
+      <p>Click below to view the PDF in fullscreen.</p>
+    
+      <div class="pdf-grid">
+        <div class="pdf-card" onclick="openPdf('../static/Project3 Retrospective.pdf')">
+          <img src="../static/sprint1_retrospective.png" alt="Retrospective PDF" class="pdf-thumbnail">
+          <p>Sprint 1 & 2 Retrospective (PDF)</p>
+        </div>
+      </div>
     </section>
+    
+    
 
     <section>
       <h2>✔️ Definition of Done (DoD)</h2>
@@ -84,13 +101,14 @@
       </ul>
     </section>
 
-  <!-- PDF Modal -->
-  <div id="pdf-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closePdf()">×</span>
-      <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+    <!-- PDF/Image Modal -->
+    <div id="pdf-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closePdf()">×</span>
+        <iframe id="pdf-frame" src="" frameborder="0" style="width:100%; height:100%"></iframe>
+      </div>
     </div>
-  </div>
+    
 
   <!-- Link your JS -->
   <script src="../project3.js"></script>
