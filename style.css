@@ -1,3 +1,6 @@
+
+/* -------------------- Desktop / Default Styles -------------------- */
+
 body {
   background-color: rgba(85, 108, 128, 0.7);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -139,14 +142,28 @@ body {
 
 .about-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .about-text {
-  max-width: 60%;
+  flex: 2;
+}
+
+.about-photo {
+  flex-shrink: 0;
+}
+
+.about-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .about-text h2 {
@@ -159,17 +176,6 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
-}
-
-.about-photo {
-  max-width: 35%;
-  padding-left: 20px;
-}
-
-.about-photo img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #my-toolkit {
@@ -186,9 +192,9 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 30px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -222,7 +228,6 @@ body {
 
 .contact-container {
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   align-items: flex-start;
   max-width: 1200px;
@@ -234,9 +239,7 @@ body {
 
 .contact-info {
   flex: 1;
-  /* max-width: 50%; */
   padding-right: 40px;
-  /* margin-bottom: 20px; */
 }
 
 .contact-info h2 {
@@ -254,13 +257,9 @@ body {
 .social-icons {
   display: flex;
   gap: 20px;
-  /* justify-content: center; */
-  /* margin-bottom: 20px; */
 }
 
 .social-icons img {
-  /* display: flex;
-  gap: 15px; */
   width: 30px;
   height: 30px;
   transition: transform 0.3s ease;
@@ -310,31 +309,50 @@ body {
   background-color: #29275b;
 }
 
-/* Mobile Styles */
+.site-footer {
+  background-color: rgba(56, 70, 82, 0.7);
+  color: #030303;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+
+/* -------------------- Tablet Styles (≤768px) -------------------- */
 @media screen and (max-width: 768px) {
   body {
     padding: 10px;
     display: block;
   }
 
-  header .intro {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-photo {
+    justify-content: center;
     margin-top: 20px;
   }
 
-  .about-contrainer {
-    flex-direction: column;
-    align-items: center;
+  .about-photo img {
+    width: 140px;
+    height: 140px;
   }
 
-  .about-text,
-  .about-photo {
-    max-width: 100%;
-    text-align: center;
-    padding: 0;
+  .about-text {
+    width: 100%;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .contact-container {
@@ -343,12 +361,7 @@ body {
   }
 
   .contact-form {
-    margin-left: center;
     margin-bottom: 20px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .social-icons {
@@ -370,7 +383,7 @@ body {
   }
 }
 
-/* For smaller phones... */
+/* -------------------- Mobile Styles (≤480px) -------------------- */
 @media screen and (max-width: 480px) {
   .skills-grid {
     grid-template-columns: 1fr;
@@ -383,17 +396,4 @@ body {
   .about-photo img {
     width: 80%;
   }
-}
-
-.site-footer {
-  background-color: rgba(56, 70, 82, 0.7);
-  color: #030303;
-  text-align: center;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  width: 100%;
-}
-
-.site-footer p {
-  margin: 0;
 }
