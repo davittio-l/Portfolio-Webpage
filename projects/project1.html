@@ -48,7 +48,23 @@
       </div>
     </section>
 
-    <section id="product-backlog">
+
+    <div class="monday-section">
+      <h2>Product Backlog</h2>
+      <p>This is a live view of all product-level tasks and features.</p>
+      <div class="embed-wrapper">
+        <iframe 
+        width="100%" 
+        height="600" 
+        style="border: none;" 
+        src="https://view.monday.com/embed/9733482366-9979191ebc06d4a435730194e35f6790?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" 
+        allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+    
+
+    <!-- <section id="product-backlog">
       <h2>Interactive Product Backlog</h2>
       <p>This is the live Product Backlog view powered by Monday.com. You can explore tasks, user stories, and priorities in real time.</p>
     
@@ -59,7 +75,7 @@
         src="https://view.monday.com/embed/9733482366-9979191ebc06d4a435730194e35f6790?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);" 
         allowfullscreen>
       </iframe>
-    </section>
+    </section> -->
 
     <section id="sprint-backlog">
       <h2>Sprint Backlog</h2>
@@ -87,15 +103,18 @@
     </section>
 
     <section>
-      <h2>✔️ Definition of Done (DoD)</h2>
-      <ul>
-        <li>Code committed and merged</li>
-        <li>Unit tested with >80% coverage</li>
-        <li>Peer-reviewed</li>
-        <li>Deployed to staging environment</li>
-        <li>Demoed and accepted by Product Owner</li>
-      </ul>
+      <h2>Definition of Done (DoD)</h2>
+      <p>Click below to view the PDF in fullscreen.</p>
+    
+      <div class="pdf-grid">
+        <div class="pdf-card" onclick="openPdf('../static/Definition_of_Done_Project1_v2.pdf')">
+          <img src="../static/Definition_of_Done_Thumbnail.png" alt="Definition of Done PDF" class="pdf-thumbnail">
+          <p>Definition of Done (PDF)</p>
+        </div>
+      </div>
     </section>
+    
+    
 
     <!-- PDF/Image Modal -->
     <div id="pdf-modal" class="modal">
