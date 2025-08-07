@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="../project3.css" />
 </head>
 <body>
-  <header style="text-align:center; padding: 40px 20px;">
+  <div class="hero">
     <h1>DevOps Automation Dashboard</h1>
     <p>An Agile approach to building a DevOps Dashboard for internal teams using Kanban.</p>
-    <a href="../index.html" style="color:#393347; font-weight: bold;">← Back to Portfolio</a>
-  </header>
+    <a href="../index.html">← Back to Portfolio</a>
+  </div>
 
   <main style="max-width: 1000px; margin: 0 auto; padding: 20px;">
     <section>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </section>
-
+    
     <section id="agile-metrics">
       <h2>Agile Metrics</h2>
       <p>Click below to view Agile reports in fullscreen.</p>
@@ -55,17 +55,21 @@
       </div>
     </section>
     
-
-    <section id="kanban">
-      <h2>Interactive Kanban board</h2>
+    <section>
+      <h2>Interactive Kanban Board</h2>
       <p>This is the live Kanban board powered by Monday.com. You can explore tasks, user stories, and priorities in real time.</p>
     
-      <iframe 
-        width="100%" 
-        height="600" 
-        style="border: none;" 
-        src="https://view.monday.com/embed/9738435279-9e3e1aaed028c2ac021c1ddc8ab569f9?r=use1" width=770 height=500 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+      <div class="embed-wrapper">
+        <iframe
+          width="100%"
+          height="600"
+          style="border: none;"
+          src="https://view.monday.com/embed/9738435279-9e3e1aaed028c2ac021c1ddc8ab569f9?r=use1"
+          allowfullscreen
+        ></iframe>
+      </div>
     </section>
+    
 
     <section>
       <h2>Sprint Retrospective – Sprint 1 & 2</h2>
@@ -73,22 +77,24 @@
     
       <div class="pdf-grid">
         <div class="pdf-card" onclick="openPdf('../static/Project3_Retrospective_S1_S2.pdf')">
-          <img src="../static/Project3_retrospective_s1_s2.png" alt="Retrospective PDF" class="pdf-thumbnail">
+          <img src="../static/Project3_Retrospective_S1_S2.png" alt="Retrospective PDF" class="pdf-thumbnail">
           <p>Sprint 1 & 2 Retrospective (PDF)</p>
         </div>
       </div>
     </section>
     
     <section>
-      <h2>✔️ Definition of Done (DoD)</h2>
-      <ul>
-        <li>Code committed and merged</li>
-        <li>Unit tested with >80% coverage</li>
-        <li>Peer-reviewed</li>
-        <li>Deployed to staging environment</li>
-        <li>Demoed and accepted by Product Owner</li>
-      </ul>
+      <h2>Definition of Done (DoD)</h2>
+      <p>Click below to view the PDF in fullscreen.</p>
+    
+      <div class="pdf-grid">
+        <div class="pdf-card" onclick="openPdf('../static/DevOps_DoD.pdf')">
+          <img src="../static/DevOps_DOD.png" alt="Definition of Done PDF" class="pdf-thumbnail">
+          <p>Definition of Done (PDF)</p>
+        </div>
+      </div>
     </section>
+    
 
     <!-- PDF/Image Modal -->
     <div id="pdf-modal" class="modal">
