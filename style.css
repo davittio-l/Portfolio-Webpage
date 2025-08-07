@@ -271,9 +271,9 @@ body {
 }
 
 .contact-form {
-  flex-grow: 1;
-  /* max-width: 40%; */
-  margin-left: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .contact-form form {
