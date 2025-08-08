@@ -1,4 +1,4 @@
-fetch("https://lms2rcmkpk.execute-api.us-east-2.amazonaws.com/contact", {
+fetch("https://lms2rcmkpk.execute-api.us-east-2.amazonaws.com/live", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
